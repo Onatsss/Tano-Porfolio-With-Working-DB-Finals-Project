@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="{% static 'ContactStyle.css'%}">
+        <link rel="stylesheet" href="{% static 'body-transition.css'%}">
+        <link rel="icon" href="{% static 'HF-Icon.png'%}"> 
+        <title> Hoopflix </title>
+    </head>
+
+    <body id="HFbackground"style="background-image:url('{% static 'contacts-bg.jpg' %}');">
+
+    <body>
+
+    <div class="header">
+        <a href="{% url 'Hoopflix'%}" class="logo">HOOPFLIX</a>
+
+        <div class="navbar">
+            <a href="{% url 'Home' %}">Home</a>
+            <a href="{% url 'Portfolio' %}">Portfolio</a>
+            <a href="{% url 'Contacts' %}">Contacts</a>   
+        </div>
+    </div>
+
+    <section class="contact">
+        <div class="content">
+            <h1>CONTACTS</h1>
+            <p>Here in Contacts, you will find all of my official social media account. You can contact me or leave a message in the box below for inquries.    </p>                
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><img src="{% static 'fb-icon.png'%}" onclick="myFB()"></div>
+                    <div class="text">
+                        <h2>Facebook</h2>
+                        <p>facebook.com/TanoCeazar</P>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="{% static 'ig-icon.png'%}" onclick="myIG()"></div>
+                    <div class="text">
+                        <h2>Instagram</h2>
+                        <p>instagram.com/@ceazartanoo</P>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><img src="{% static 'email-icon.png'%}" onclick="location.href = 'https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCHrkVgmhfDTRpvMDJbZvHxgbbgWTmzhXmxrNgrDVKbfVgNfGrDWfspMmbgKndmtsQCJnzgV'"></div>
+                    <div class="text">
+                        <h2>Email</h2>
+                        <p>ceazarjacusalem26@gmail.com</P>
+                    </div>
+                </div>
+            </div>
+        <div class="contactForm">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <h3>Send Message</h3>
+                    <div class="inputBox">
+                        <input type="text" name="FullName" required>
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" name="Email" required>
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea name="Message" required></textarea>
+                        <span>Type your Message...</span>
+                    </div>
+                    <button class="submit">Submit</button>
+                    <style>
+                        .submit {
+                            width: 100px;
+                            background: black;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                            padding: 10px;
+                            font-size: 18px;
+                        }
+                    </style>
+                </form>
+            </div> 
+        </div>
+    </section>
+    <script src="{% static 'link.js'%}"></script>
+</body> 
+</html>

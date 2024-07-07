@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="{% static 'HFstyle.css'%}">
+        <link rel="stylesheet" href="{% static 'body-transition.css'%}">
+        <link rel="icon" href="{% static 'HF-Icon.png'%}"> 
+        <title> Hoopflix </title>
+    </head>
+
+    <body id="HFbackground"style="background-image:url('{% static 'hoopflix-bg.jpg' %}');">
+
+    <body>
+
+    <div class="header">
+        <a href="{% url 'Hoopflix'%}" class="logo">HOOPFLIX</a>
+
+        <div class="navbar">
+            <a href="{% url 'Home' %}">Home</a>
+            <a href="{% url 'Portfolio' %}">Portfolio</a>
+            <a href="{% url 'Contacts' %}">Contacts</a>   
+        </div>
+    </div>
+
+    <div class="introduction">
+        <h1>LOVE FOR HOOP</h1>
+        <p>Presented By: Ceazar Martin J. Tano</p>
+    </div>
+
+</body> 
+</html>

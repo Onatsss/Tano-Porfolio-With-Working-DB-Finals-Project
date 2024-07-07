@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <link rel="stylesheet" href="{% static 'HFstyle.css'%}">
+        <link rel="icon" href="{% static 'HF-Icon.png'%}"> 
+        <title> Hoopflix </title>
+    </head>
+
+    <body id="HFbackground"style="background-image:url('{% static 'home-bg.jpg' %}');">
+
+    <body>
+
+    <div class="header">
+        <a href="{% url 'Hoopflix'%}" class="logo">HOOPFLIX</a>
+
+        <div class="navbar">
+            <a href="{% url 'Home' %}">Home</a>
+            <a href="{% url 'Portfolio' %}">Portfolio</a>
+            <a href="{% url 'Contacts' %}">Contacts</a>   
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card">
+          <img src="{% static 'photo-card1.jpg'%}">
+          <div class="card-content">
+            <h1>HOME</h1>
+            <p>It is about who is behind the creator of the page "Hoopflix".</p>
+            <a href="#profile" class="card-button">Read More</a>
+          </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'photo-card2.jpg'%}">
+            <div class="card-content">
+              <h1>PORTFOLIO</h1>
+              <p>Some of Hoopflix's Designs and Achievements.</p>
+              <a href="{% url 'Portfolio' %}" class="card-button">View to See</a>
+            </div>
+          </div>
+          <div class="card">
+            <img src="{% static 'photo-card3.jpg'%}">
+            <div class="card-content">
+              <h1>CONTACTS</h1>
+              <p>Where you can find Hoopflix official social media and reach out.</p>
+              <a href="{% url 'Contacts' %}" class="card-button">More Info</a>
+            </div>
+          </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+      <section id="profile" class="home">
+        <div class="main">
+          <img src="{% static 'home-picture.jpg'%}" alt="proflie.jpg">
+          <div class="about-text">
+            <h1>HOOPFLIX.</h1>
+            <h5>Content Creator</h5>
+            <p>My name is Ceazar Martin J. Tano. I am currently a 3rd year college
+              student from St. Louie Anne College, and my course that i am
+              currently taking is Major in Information Technology. Now, i 
+              am creating some basketball content and featuring some of the best hooper
+              here in the Philippines.</p> 
+          <a href="{% url 'Portfolio' %}"class="button">View Portfolio</a>
+          </div>
+        </div> 
+      </section>
+    </div> 
+
+
+</body> 
+</html>
